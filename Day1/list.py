@@ -1,0 +1,5 @@
+arr=input("Enter the numbers:")
+li=list(arr)
+tu=tuple(arr)
+print(li)
+print(tu)
