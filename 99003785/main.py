@@ -9,14 +9,21 @@ the desired word.
 
 '''
 import re
+
 file=open("D:\99003785\DOC\input.txt","r")# creation of the file
+
+#file=open("C:\Users\nEW u\Desktop\the anonymous\L&T\input1.txt","r")# creation of the file
+
 input_search_word_1=input("Enter the first word to be searched:\n")# User input; word to be searched by the user.
+
 count=0
+
 read_file1=file.read()
+
 z=(re.findall(input_search_word_1,read_file1,re.M|re.I))
 if z:
     print(len(z))
-read_file=file.readlines()
+#read_file=file.readlines()
 '''#Counting the number of times the word appears in the file.
 for line in read_file:                                        
     z=(re.findall(input_search_word_1,file,re.M|re.I))
@@ -25,7 +32,7 @@ for line in read_file:
 
 #print(len(z))
 print(count)'''
-#Creation of the file where 
+#Creation of the file w.r.t the input given
 user_input_1=input_search_word_1+".txt"
 file_write=open(user_input_1,"w")
 file_write.write(str(len(z)))
