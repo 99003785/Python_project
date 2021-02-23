@@ -8,7 +8,7 @@ from the given file. The final output of the opeartion is a file is created with
 the desired word.
 
 '''
-import re
+'''import re
 #Function to open the text file and take the user input
 
 file=open("D:\99003785\DOC\input.txt","r")# creation of the file
@@ -26,14 +26,14 @@ def Count_occurences(file):
         return(len(z))
 
 #read_file=file.readlines()
-'''#Counting the number of times the word appears in the file.
+#Counting the number of times the word appears in the file.
 for line in read_file:                                        
     z=(re.findall(input_search_word_1,file,re.M|re.I))
     if z:
         count+=1
 
 #print(len(z))
-print(count)'''
+print(count)
 a=Count_occurences(file)
 
 #Creation of the file w.r.t the input given, function definition
@@ -47,3 +47,42 @@ def file_generate(input_word,occur) :
 
 #Function to create the file:
 file_generate(input_search_word_1,a)
+
+
+#function to print lines
+def func_to_print_lines(file):
+    software=[]
+    lines=0
+    pattern=re.compile(input_search_word_1,re.IGNORECASE)
+    for file_line in file:
+        lines+=1
+        if pattern.search(file_line) != None:
+            software.append((lines,file_line.rstrip('\n')))
+            print(software)
+    for i in software:
+        if pattern.search(software[i]):
+            print(software[i-1]+software[i]+software[i+1])
+
+
+#calling func to print the lines
+func_to_print_lines(file)
+
+'''
+import re
+with open("D:\99003785\DOC\input.txt") as searchfile:
+    text=searchfile.read()
+    '''d=re.findall('([^\r\n]+) Software?([^\r\n]+)',text,re.IGNORECASE)
+    #print(d)
+    for result in d:
+        print(result[0])'''
+
+#([^\r\n]+) Software?([\r\n]| |$)
+import re
+pattern = "(.+)  software (.+) "
+match = re.search(pattern, text)
+if match:
+    print(firstword_before = match.group(1) )# first pair of parentheses
+    lastword_before = match.group(2)
+
+    #firstword_after = match.group(3)
+    #lastword_after = match.group(10)
