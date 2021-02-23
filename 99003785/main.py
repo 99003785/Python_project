@@ -71,13 +71,12 @@ func_to_print_lines(file)
 import re
 with open("D:\99003785\DOC\input.txt") as searchfile:
     text=searchfile.read()
-    '''d=re.findall('([^\r\n]+) Software?([^\r\n]+)',text,re.IGNORECASE)
-    #print(d)
-    for result in d:
-        print(result[0])'''
+    for m in re.finditer('(?:^|\s+\S+)software?(?:\s*\s+\S+|$)',text,re.IGNORECASE):
+        print(m)
+    
 
 #([^\r\n]+) Software?([\r\n]| |$)
-import re
+'''import re
 pattern = "(.+)  software (.+) "
 match = re.search(pattern, text)
 if match:
@@ -85,4 +84,5 @@ if match:
     lastword_before = match.group(2)
 
     #firstword_after = match.group(3)
-    #lastword_after = match.group(10)
+    #lastword_after = match.group(10)'''
+
