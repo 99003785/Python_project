@@ -6,10 +6,11 @@
 This program performs the grep operation , i.e. user needs to provide a word that he / she wants to search
 from the given file. The final output of the opeartion is a file is created with the count and instances of 
 the desired word.
-
 '''
+
+
+
 import re
-#Function to open the text file and take the user input
 
 file=open("D:\99003785\DOC\input.txt","r")# creation of the file
 
@@ -25,15 +26,7 @@ def Count_occurences(file):
     if z:
         return(len(z))
 
-#read_file=file.readlines()
-'''#Counting the number of times the word appears in the file.
-for line in read_file:                                        
-    z=(re.findall(input_search_word_1,file,re.M|re.I))
-    if z:
-        count+=1
-
-#print(len(z))
-print(count)'''
+#capturing the occurences
 a=Count_occurences(file)
 
 #Creation of the file w.r.t the input given, function definition
