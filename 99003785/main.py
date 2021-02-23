@@ -1,6 +1,7 @@
 #Author: Sourav Dey(99003785)
 #Contact: sourav.dey@ltts.com /deysourav0909@gmail.com
 #Date of creation: 22/2/2021
+import re
 
 '''
 This program performs the grep operation , i.e. user needs to provide a word that he / she wants to search
@@ -68,10 +69,10 @@ def func_to_print_lines(file):
 func_to_print_lines(file)
 
 '''
-import re
-with open("D:\99003785\DOC\input.txt") as searchfile:
-    text=searchfile.read()
-    for m in re.finditer('(?:^|\s+\S+)software?(?:\s*\s+\S+|$)',text,re.IGNORECASE):
+
+with open("input.txt") as searchfile:
+    text = searchfile.read()
+    for m in re.finditer('(?:^|\s+\S+) software?(?:\s*\s+\S+|$)', text, re.IGNORECASE):
         print(m)
     
 
