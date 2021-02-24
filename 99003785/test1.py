@@ -3,11 +3,17 @@ count = 0
 str1 = " "
 input_file = open("D:\99003785\DOC\input.txt")
 input_word_searched = input("Enter the word:\n")
-file_name = input_word_searched+"txt"
+file_name = input_word_searched+"txt" #For output file
 file_out = open(file_name, 'w')
+
 file_line = input_file.read()
+#file_3 = [file_line.strip(' ') for x in file_line]
+#file__2=''.join(file_line.split())
 file_list = file_line.split()
 file_1 = re.split(r"\W",str(file_list))
+
+#filer_1 = re.sub('+',' ',file_1)
+
 
 
 for i in range(len(file_1)):
@@ -19,7 +25,7 @@ for i in range(len(file_1)):
         file_out.write("\n")
 
 print(count)
-file_out.write("count="+str(count))
+file_out.write("Number of occurences="+str(count))
 input_file.close()
 file_out.close()
 
