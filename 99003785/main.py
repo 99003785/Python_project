@@ -71,10 +71,10 @@ func_to_print_lines(file)
 '''
 
 #with open("D:\99003785\DOC\input.txt") as searchfile:
-with open("input.txt") as searchfile:
+with open("D:\99003785\DOC\input.txt") as searchfile:
     text = searchfile.read()
-    count=0
-    for m in re.finditer('(?:^|\s+\S+) +gnu?(?:\s*\s+\S+|$)', text, re.IGNORECASE):
+    
+    for m in re.finditer('(?:^|\s+\S+) software?(?:\s*\s+\S+|$)', text, re.IGNORECASE):
         print(m)
         
 
