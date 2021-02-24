@@ -1,12 +1,8 @@
-import re
-input_1=input("Enter the word:\n")
-file=open("D:\99003785\DOC\input.txt",'r')
+#class python_project():
 
-count=1
-read_line=file.readlines()
-for line in read_line():
-    list_1=re.findall(input_1,line,re.M|re.I)
-    if list_1:
-        count+=1
+    #def __init__(self):
+        #self.search_word_1 = input("Enter the first word to be searched.\n")
+        #self.search_word_2 = input("Enter the second word to be searched.\n")
 
-print(count)
+
+        
