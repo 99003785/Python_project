@@ -1,14 +1,49 @@
+#Author: Sourav Dey(99003785)
+#Contact: sourav.dey@ltts.com /deysourav0909@gmail.com
+#Date of creation: 22/2/2021
+
+#-------------------------------------------------------------------------------------------------------------#
+#-------------------------------------------------------------------------------------------------------------#
+
+'''
+This program performs the grep operation , i.e. user needs to provide a word that he / she wants to search
+from the given file. The final output of the opeartion is a file is created with the count and instances of 
+the desired word.
+'''
+#-------------------------------------------------------------------------------------------------------------#
+#-------------------------------------------------------------------------------------------------------------#
+
+
+
 import re
 
 
+
+#---------------------------------------------------------------------------------------------------------------#
+#---------------------------------------------------------------------------------------------------------------#
+'''
+This block contains the class PythonProject .
+All the file related operation like opening a file and passing the input search word is passed
+in the init constructor of the class.
+
+'''
+#---------------------------------------------------------------------------------------------------------------#
+#---------------------------------------------------------------------------------------------------------------#
 class PythonProject:
 
     def __init__(self, input_search_word):
-        self.input_file = open("input.txt")
+        self.input_file = open("D:\99003785\DOC\input.txt")
         self.input_search_word = input_search_word
         self.file_line = self.input_file.read()
         
         print("I am in init func")
+
+        #-----------------------------------------------------------------------------------------------#
+        '''
+        This method performs the grep operation.
+        It seraches the word in the file and returns the occurences and its instances
+        '''
+        #------------------------------------------------------------------------------------------------#
 
     def my_occur_func(self):
         count = 0
@@ -30,6 +65,21 @@ class PythonProject:
         file_out.write("Number of occurrences ="+str(count))
         self.input_file.close()
         file_out.close()
+
+
+
+
+#-------------------------------------------------------------------------------------------------------------#
+#-------------------------------------------------------------------------------------------------------------#
+'''
+This is the main function.
+It takes the user input. 
+The object of the above defined class is created in the main function.
+
+'''
+#-------------------------------------------------------------------------------------------------------------#
+#-------------------------------------------------------------------------------------------------------------#
+
 
 
 if __name__ == "__main__":
