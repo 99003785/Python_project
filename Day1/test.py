@@ -1,4 +1,4 @@
-import re
+'''import re
 count= 0
 software=list()
 lines=0
@@ -12,11 +12,11 @@ with open("D:\99003785\DOC\input.txt",'rt') as file_info:
         
         if pattern.search(file_line)!= None:
             software.append((lines,file_line.rstrip('\n')))
-           ''' for line in software:
+            for line in software:
                 stripped_line = line.strip()
                 line_list = stripped_line.split()
                 list_of_lines.append(line_list)
-        print(list_of_lines)'''
+        print(list_of_lines)
 
                             
     for answer in software:
@@ -26,3 +26,4 @@ with open("D:\99003785\DOC\input.txt",'rt') as file_info:
             file_answer.writelines(str(count)+':')
             file_answer.writelines(answer[1]+'\n')        
 
+'''
