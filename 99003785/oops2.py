@@ -34,8 +34,6 @@ if __name__ == "__main__":
     number=int(input("Enter the number of words you want to search:\n"))
     while number!=0:
         input_search_word=input("Enter the word:\n")
-        #word_list=list(input_search_word)
-    
         word = python_project(input_search_word)
         word.my_occur_func()
         number-=1
