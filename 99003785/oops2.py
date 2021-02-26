@@ -35,7 +35,7 @@ in the init constructor of the class.
 class PythonProject:
 
     def __init__(self, input_search):
-        self.input_file = open("D:\99003785\DOC\input.txt", 'r')
+        self.input_file = open("input.txt", 'r')
         self.input_search = input_search
         self.file_line = self.input_file.read()
         print("I am in init func")
