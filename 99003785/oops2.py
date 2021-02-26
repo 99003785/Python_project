@@ -6,8 +6,11 @@
 # -------------------------------------------------------------------------------------------------------------#
 
 """
-This program performs the grep operation , i.e. user needs to provide a word that he / she wants to search
-from the given file. The final output of the operation is a file is created with the count and instances of
+This program performs the grep operation i.e. user needs to
+provide a word that he / she wants to search
+from the given file.
+The final output of the operation is a file is created
+with the count and instances of
 the desired word.
 """
 
@@ -19,8 +22,9 @@ import re
 # -------------------------------------------------------------------------------------------------------------#
 # -------------------------------------------------------------------------------------------------------------#
 '''
-This block contains the class PythonProject .
-All the file related operation like opening a file and passing the input search word is passed
+This block contains the class PythonProject.
+All the file related operation like opening a file and
+passing the input search word is passed
 in the init constructor of the class.
 
 '''
@@ -31,18 +35,21 @@ in the init constructor of the class.
 class PythonProject:
 
     def __init__(self, input_search):
-        self.input_file = open("input.txt")
+        self.input_file = open("D:\99003785\DOC\input.txt", 'r')
         self.input_search = input_search
         self.file_line = self.input_file.read()
-        
         print("I am in init func")
 
         # -----------------------------------------------------------------------------------------------#
         '''
         This method performs the grep operation.
-        It searches the word in the file and returns the occurrences and its instances
+        It searches the word in the file and returns the occurrences
+        and its instances.
         '''
         # -----------------------------------------------------------------------------------------------#
+
+
+class MyOperation(PythonProject):
 
     def my_occur_func(self):
         count = 0
@@ -71,7 +78,7 @@ class PythonProject:
 
 '''
 This is the main function.
-It takes the user input. 
+It takes the user input.
 The object of the above defined class is created in the main function.
 '''
 
@@ -84,6 +91,6 @@ if __name__ == "__main__":
     number = int(input("Enter the number of words you want to search:\n"))
     while number != 0:
         input_search_word = input("Enter the word:\n")
-        word = PythonProject(input_search_word)
+        word = MyOperation(input_search_word)
         word.my_occur_func()
         number -= 1
