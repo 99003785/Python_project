@@ -7,7 +7,7 @@
 
 """
 This program performs the grep operation i.e. user needs to
-provide a word that he / she wants to search 
+provide a word that he / she wants to search
 from the given file.
 The final output of the operation is a file is created
 with the count and instances of
@@ -96,4 +96,4 @@ if __name__ == "__main__":
         number -= 1
 
 
-# ---------------------------------------------END OF PROGRAM-------------------------------------------------#
+# ---------------------------END OF PROGRAM-----------------------------------#
