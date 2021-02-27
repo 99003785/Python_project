@@ -38,7 +38,7 @@ class PythonProject:
         self.input_file = open("input.txt", 'r')
         self.input_search = input_search
         self.file_line = self.input_file.read()
-        print("I am in init func")
+        print("Occurences of keyword")
 
         # -----------------------------------------------------------------------------------------------#
         '''
