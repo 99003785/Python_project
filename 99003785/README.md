@@ -4,7 +4,7 @@
 
 ## Reading of the input text file.
 
-<<<<<<< HEAD
+
 ## Taking the user input word to be searched.
 
 ## Providing the occurrences of the input word and giving each instances.
@@ -24,8 +24,6 @@
 2. ## File will contain number of occurrences of the keyword in the text file.
 
 3. ## File will contain the instances of the keyword from the text file.
-=======
-Providing the occurrences of the input word and giving each instances.
 
 
->>>>>>> 47e19e7ad5792565591156679bbdd13d8e21c896
+
